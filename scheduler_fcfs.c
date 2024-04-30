@@ -34,6 +34,14 @@ void add(char *name, int priority, int burst) {
     }
 }
 
+void schedule() {
+    // This is where the shit goes down
+    int final = 0;
+    float turnAroundTime = 0;
+    float waitTime = 0;
+
+}
+
 void print() {
     printf("%s", curNode->task->name);
 }
