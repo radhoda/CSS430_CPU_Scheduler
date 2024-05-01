@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "list.h"
+#include "cpu.h"
 
 struct node *head = NULL;
 struct node *newNode = NULL;
@@ -12,6 +13,8 @@ struct node *curNode = NULL;
 void add(char *name, int priority, int burst) {
     if (head == NULL) {
         head = malloc(sizeof(struct node));
+
+        head->task = malloc(sizeof(struct task));
 
         head->task->name = name;
         head->task->priority = priority;
@@ -24,6 +27,7 @@ void add(char *name, int priority, int burst) {
     else {
         newNode = malloc(sizeof(struct node));
         //Pointing last node to the next newNode node
+        newNode->task = malloc(sizeof(struct task));
         curNode->next = newNode;
 
         newNode->task->name = name;
@@ -36,12 +40,21 @@ void add(char *name, int priority, int burst) {
 
 void schedule() {
     // This is where the shit goes down
-    int final = 0;
-    float turnAroundTime = 0;
+    int time = 0;
+    int turnAroundTime = 0;
     float waitTime = 0;
 
+    struct node *cur = head;
+
+    while(cur) {
+        turnAroundTime += cur->task->burst;
+        run(cur->task, cur->task->burst, time);
+        time += cur->task->burst;
+        cur = cur->next;
+    }
+    printf("Final time: %d", time);
 }
 
-void print() {
-    printf("%s", curNode->task->name);
+void printNode() {
+    printf("%s\n", curNode->task->name);
 }
