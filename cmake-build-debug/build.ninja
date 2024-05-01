@@ -73,6 +73,18 @@ build CMakeFiles/CSS43_CPU_Scheduler.dir/schedule_fcfs.c.o: C_COMPILER__CSS43_CP
   OBJECT_DIR = CMakeFiles/CSS43_CPU_Scheduler.dir
   OBJECT_FILE_DIR = CMakeFiles/CSS43_CPU_Scheduler.dir
 
+build CMakeFiles/CSS43_CPU_Scheduler.dir/schedule_sjr.c.o: C_COMPILER__CSS43_CPU_Scheduler_unscanned_Debug /Users/radhoda/Downloads/CSS43_CPU_Scheduler/schedule_sjr.c || cmake_object_order_depends_target_CSS43_CPU_Scheduler
+  DEP_FILE = CMakeFiles/CSS43_CPU_Scheduler.dir/schedule_sjr.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/CSS43_CPU_Scheduler.dir
+  OBJECT_FILE_DIR = CMakeFiles/CSS43_CPU_Scheduler.dir
+
+build CMakeFiles/CSS43_CPU_Scheduler.dir/schedule_priority.c.o: C_COMPILER__CSS43_CPU_Scheduler_unscanned_Debug /Users/radhoda/Downloads/CSS43_CPU_Scheduler/schedule_priority.c || cmake_object_order_depends_target_CSS43_CPU_Scheduler
+  DEP_FILE = CMakeFiles/CSS43_CPU_Scheduler.dir/schedule_priority.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/CSS43_CPU_Scheduler.dir
+  OBJECT_FILE_DIR = CMakeFiles/CSS43_CPU_Scheduler.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target CSS43_CPU_Scheduler
@@ -81,7 +93,7 @@ build CMakeFiles/CSS43_CPU_Scheduler.dir/schedule_fcfs.c.o: C_COMPILER__CSS43_CP
 #############################################
 # Link the executable CSS43_CPU_Scheduler
 
-build CSS43_CPU_Scheduler: C_EXECUTABLE_LINKER__CSS43_CPU_Scheduler_Debug CMakeFiles/CSS43_CPU_Scheduler.dir/driver.c.o CMakeFiles/CSS43_CPU_Scheduler.dir/list.c.o CMakeFiles/CSS43_CPU_Scheduler.dir/CPU.c.o CMakeFiles/CSS43_CPU_Scheduler.dir/schedule_fcfs.c.o
+build CSS43_CPU_Scheduler: C_EXECUTABLE_LINKER__CSS43_CPU_Scheduler_Debug CMakeFiles/CSS43_CPU_Scheduler.dir/driver.c.o CMakeFiles/CSS43_CPU_Scheduler.dir/list.c.o CMakeFiles/CSS43_CPU_Scheduler.dir/CPU.c.o CMakeFiles/CSS43_CPU_Scheduler.dir/schedule_fcfs.c.o CMakeFiles/CSS43_CPU_Scheduler.dir/schedule_sjr.c.o CMakeFiles/CSS43_CPU_Scheduler.dir/schedule_priority.c.o
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
   OBJECT_DIR = CMakeFiles/CSS43_CPU_Scheduler.dir
   POST_BUILD = :
