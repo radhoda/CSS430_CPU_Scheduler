@@ -1,0 +1,14 @@
+CSS430 CPU Scheduler - Rad Hoda
+
+1 - FCFS: Implemented and time displayed            5/5
+2 - SJF: Implemented and time displayed             5/5
+3 - Priority: Implemented and time displayed        5/5
+4 - Round Robin: Implemented and time displayed     5/5
+5 - RR (Priority): Implemented and time displayed   5/5
+
+Total Points: 25/25
+
+Note: I made a small change to the task.h file. I added an int variable
+      to the struct. This variable "timeremaining" is the burst time but
+      decremented by the quantum time. It is only used in the round robin
+      scheduler.
