@@ -52,10 +52,11 @@ void schedule() {
         while (cur != NULL) {
             if (cur->task->remainingTime > 0) {
                 int slice = (cur->task->remainingTime > quantum) ? quantum : cur->task->remainingTime;
-                time += cur->task->burst;
+                time += slice;
                 cur->task->remainingTime -= slice;
-                run(cur->task, slice,time);
+                run(cur->task, slice);
                 isTaskComplete = 0;
+                printf("Time is now: %d\n", time);
             }
             cur = cur->next;
         }
