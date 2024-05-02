@@ -52,7 +52,6 @@ void add(char *name, int priority, int burst) {
 void schedule() {
     int time = 0;
     int turnAroundTime = 0;
-    float waitTime = 0;
 
     struct node *cur = head;
 

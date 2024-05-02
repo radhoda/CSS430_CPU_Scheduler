@@ -50,20 +50,17 @@ void add(char *name, int priority, int burst) {
 }
 
 void schedule() {
-    // This is where the shit goes down
     int time = 0;
     int turnAroundTime = 0;
-    float waitTime = 0;
 
     struct node *cur = head;
 
     while(cur) {
         turnAroundTime += cur->task->burst;
-        run(cur->task, cur->task->burst, time);
+        run(cur->task, cur->task->burst);
         time += cur->task->burst;
         cur = cur->next;
+        printf("Time is now: %d\n", time);
     }
-    printf("Final time: %d\n", time);
-
 }
 
