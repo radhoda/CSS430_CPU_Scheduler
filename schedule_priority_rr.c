@@ -61,7 +61,7 @@ void schedule() {
         if (tempNode->next == NULL) {
             run(tempNode->task, tempNode->task->burst);
             time += tempNode->task->burst;
-            printf("Time is now: %d\n", time);
+            printf("Time is now1: %d\n", time);
             break;
         }
         else {
@@ -69,7 +69,7 @@ void schedule() {
 
                 run(tempNode->task, tempNode->task->burst);
                 time += tempNode->task->burst;
-                printf("Time is now: %d\n", time);
+                printf("Time is now2: %d\n", time);
                 tempNode = tempNode->next;
             }
             else {
@@ -94,13 +94,13 @@ void schedule() {
                                 tempNode->task->burst = 10;
                                 run(tempNode->task, 10);
                                 time += 10;
-                                printf("Time is now: %d\n", time);
+                                printf("Time is now3: %d\n", time);
                             }
                             else if (tempNode-> task-> burst < 10) {
                                 newBurst = 0;
                                 run(tempNode->task, tempNode->task->burst);
                                 time += tempNode->task->burst;
-                                printf("Time is now: %d\n", time);
+                                printf("Time is now4: %d\n", time);
                             }
                             while(1) {
                                 if (current->next !=NULL) {
